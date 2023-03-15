@@ -27,3 +27,8 @@ function Add (num1, num2) { //Creating a function
    let total =  num1 + num2 ; 
    return total;
 }
+
+// Event Challenge
+function Myfunction() {
+    alert("Everything is loaded");
+}
