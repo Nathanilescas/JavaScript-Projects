@@ -27,7 +27,7 @@ function placeXorO (squareNumber) {
         // This conditionfor changing the active player.
         if (activePlayer === "X") {
             //If active player is "X" change it to "O".
-            activePlayer = "0";
+            activePlayer = "O";
             // if active player is anything other than "X".
         } else {
             //Change the activePlayer to "X"
