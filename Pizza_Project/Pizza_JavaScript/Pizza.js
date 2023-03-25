@@ -61,11 +61,16 @@ function getTopping(runningTotal, text1) {
     }else {
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingTotal + veggiesCount);
+
+    // adding veggie total
+    var veggiesTotal = veggiesCount * .5;
+
+
+    runningTotal = (runningTotal + toppingTotal + veggiesTotal);
     console.log("total selected topping items: " + toppingCount);
     console.log(toppingCount + "topping - 1 free topping = " + "$" + toppingTotal + ".00");
     console.log("topping text1: " + text1);
     console.log("Purchase Total: " + "$" + runningTotal + ".00");
     document.getElementById("showText").innerHTML = text1;
-    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
+    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + ((runningTotal%1 == .5)? runningTotal + "0" : runningTotal + ".00")  + "</strong></h3>";
 }
