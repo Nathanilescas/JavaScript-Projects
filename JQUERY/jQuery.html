@@ -25,7 +25,10 @@
         });
         $("#1").click(function(){
             $("h1").show(500);
-        })
+        });
+        $("#4").on({
+            "click": function() {$("h2").fadeOut(1000);},
+            "mouseover": function() {$("h2").fadeIn(2000);}
 
     });
 </script>
