@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $("html").append(
+            "<body>\
+                <div id = 'container'>\
+                    <div id = 'inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <h2>JQuery</h1>\
+                        <p id = '1'>Paragraph 1 </p>\
+                        <p id = '2'>Paragraph 2 </p>\
+                        <p id = '3'>Paragraph 3 </p>\
+                        <p id = '4'>Paragragh 4 </p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#2").css({"color":"red"});
+        $("#3").click(function() {
+            $("h1").hide(500);
+        });
+        $("#1").click(function(){
+            $("h1").show(500);
+        })
+        $("#4").on({
+            "click": function() {$("h2").fadeOut(1000);},
+            "mouseover": function() {$("h2").fadeIn(2000);}
+        });
+    });
+</script>
+</html>
